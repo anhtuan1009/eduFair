@@ -256,6 +256,41 @@ jQuery(function($) {
         }
     });
 
+    var slide_sermina_2021 = new Swiper('#slide_sermina_2021', {
+        slidesPerView: 1,
+        slidesPerColumn: 1,
+        spaceBetween: 1,
+        loop: false,
+        loopFillGroupWithBlank: false,
+        speed: 800,
+        watchOverflow: true,
+        pagination: {
+            el: '.swiper-pagination-sermina-2021',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next-sermina-2021',
+            prevEl: '.swiper-button-prev-sermina-2021',
+        },
+        breakpoints: {
+            992: {
+                slidesPerView: 4,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            580: {
+                slidesPerView: 2,
+            },
+            415: {
+                slidesPerView: 1.4,
+            },
+            380: {
+                slidesPerView: 1,
+            }
+        }
+    });
+
     var swiper2 = new Swiper('#slide_sermina', {
         slidesPerView: 1,
         slidesPerColumn: 1,
@@ -330,10 +365,14 @@ jQuery(function($) {
     var swiperSlideSchool = new Swiper(slideSchool, {
         slidesPerView: 1,
         slidesPerColumn: 1,
-        spaceBetween: 15,
-        loop: true,
-        loopFillGroupWithBlank: false,
+        spaceBetween: 10,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: true,
+        },
         speed: 800,
+        loop: false,
+        loopFillGroupWithBlank: false,
         pagination: {
             el: '.swiper-pagination-university',
             clickable: true,
@@ -343,19 +382,17 @@ jQuery(function($) {
             prevEl: '.swiper-button-prev-university',
         },
         breakpoints: {
-            992: {
+            1200: {
                 slidesPerView: 3,
                 slidesPerGroup: 3,
-                spaceBetween: 28,
                 speed: 1500,
             },
-            580: {
+            768: {
                 slidesPerView: 2,
-                spaceBetween: 20,
-                speed: 1000,
+                slidesPerGroup: 2,
+                speed: 1500,
             }
         }
-
     });
 
     var swiper4 = new Swiper('#slide_tab_university', {
