@@ -5192,7 +5192,6 @@ img:not([src]) {
     -webkit-flex: auto;
         -ms-flex: auto;
             flex: auto;
-    padding-right: 30px;
   }
 }
 .wrap_bottom_area .wrap_bottom_area_inner .aside_right_area {
@@ -5205,6 +5204,7 @@ img:not([src]) {
         -ms-flex: none;
             flex: none;
     width: 355px;
+    margin-left: 30px;
   }
 }
 .section-team-opt2 {
@@ -5240,7 +5240,6 @@ img:not([src]) {
   display: block;
   vertical-align: top;
   width: 100%;
-  text-align: center;
 }
 .section-team-opt2 .team-box-list .team-list {
   display: -webkit-box;
@@ -5250,9 +5249,6 @@ img:not([src]) {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
   margin: 0 -7.5px;
 }
 .section-team-opt2 .team-box-list .team-list > * {
@@ -5274,6 +5270,15 @@ img:not([src]) {
   }
   .section-team-opt2 .team-box-list .team-list > * {
     width: calc(25% - 35px);
+    margin: 17.5px;
+  }
+}
+@media (min-width: 1200px) {
+  .section-team-opt2 .team-box-list .team-list {
+    margin: 0 -17.5px;
+  }
+  .section-team-opt2 .team-box-list .team-list > * {
+    width: calc(16.6666666667% - 35px);
     margin: 17.5px;
   }
 }
@@ -5308,10 +5313,11 @@ img:not([src]) {
   font-size: 16px;
   line-height: 1.4;
   color: #333333;
+  margin-bottom: 3px;
 }
 .section-team-opt2 .team-box-list .team-list .item-team .item-inner .item-image .item-position {
-  font-size: 12px;
-  line-height: 1.5;
+  font-size: 13px;
+  line-height: 1.4;
   color: #757575;
   margin: 0;
 }
@@ -6110,6 +6116,10 @@ img:not([src]) {
   width: 100%;
 }
 .table_list_area {
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+      -ms-flex: auto;
+          flex: auto;
   margin-bottom: 30px;
 }
 .table_list_area .title-name {
@@ -6125,6 +6135,12 @@ img:not([src]) {
   .table_list_area .title-name {
     text-indent: 50px;
   }
+}
+.table_list_area .table_template {
+  position: relative;
+  display: block;
+  border-radius: 5px;
+  overflow: hidden;
 }
 .table_list_area .table_template .table_box_detail {
   display: -webkit-box;
@@ -6217,6 +6233,12 @@ img:not([src]) {
 .table_list_area .table_template .table_sroll .table_box_desc .table_desc .count {
   width: 25%;
   text-align: right;
+  padding-right: 10px;
+}
+@media (min-width: 575px) {
+  .table_list_area .table_template .table_sroll .table_box_desc .table_desc .count {
+    padding-right: 30px;
+  }
 }
 
 .disciplines-option-1 {
@@ -7882,7 +7904,18 @@ img:not([src]) {
 .oFair .section-sermina-2021 {
   position: relative;
   display: block;
-  padding: 30px 0;
+  padding: 20px 0 30px;
+}
+.oFair .section-sermina-2021.title_indent .sermina-box-title {
+  margin-bottom: 15px;
+}
+@media (min-width: 1400px) {
+  .oFair .section-sermina-2021.title_indent .sermina-box-title {
+    text-indent: 50px;
+  }
+}
+.oFair .section-sermina-2021.no_background:before {
+  display: none;
 }
 .oFair .section-sermina-2021:before {
   content: "";
@@ -10809,8 +10842,8 @@ img:not([src]) {
     top: 0;
   }
   .oFair .section-layout-caro .section-inner .cell-03-inner:before {
-    width: 300%;
-    left: -200%;
+    width: 100%;
+    left: 0;
     border-radius: 14px;
   }
 }
@@ -14593,12 +14626,17 @@ img:not([src]) {
 .oFair .modal-seminor ::placeholder {
   color: #8D8D8D;
 }
+.oFair .modal-seminor .modal-dialog .col-form-label {
+  color: #333;
+  font-weight: normal;
+  font-size: 14px;
+}
 .oFair .modal-seminor .modal-title {
-  font-weight: bold;
-  font-size: 26px;
+  font-weight: 500;
+  font-size: 24px;
   line-height: 31px;
   text-transform: uppercase;
-  color: #333333;
+  color: #122D98;
 }
 .oFair .modal-seminor .form-control {
   font-size: 14px;
@@ -14609,7 +14647,7 @@ img:not([src]) {
   outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 1px solid #333;
+  border: 1px solid #06AFD0;
 }
 .oFair .modal-seminor textarea {
   min-height: 80px;
@@ -14674,7 +14712,7 @@ img:not([src]) {
   margin: 0;
 }
 .oFair .modal-seminor .wrap-options-hour .wrap-options-hour-list .item-option .form-check-input:checked ~ label {
-  background-color: #0DDFAD;
+  background-color: #06AFD0;
   color: #FFFFFF;
   border: 0;
 }
@@ -14684,7 +14722,7 @@ img:not([src]) {
   cursor: not-allowed;
 }
 .oFair .modal-seminor .wrap-options-hour .wrap-options-hour-list .item-option.item-option-01 label {
-  background: #0DDFAD;
+  background: #06AFD0;
   color: #FFFFFF;
   border: 0;
 }
@@ -14737,7 +14775,7 @@ img:not([src]) {
   border-radius: 3px;
 }
 .oFair .modal-seminor .wrap-options-hour .wrap-options-hour-note .item-note.item-note-01 span:first-child {
-  background: #0DDFAD;
+  background: #06AFD0;
 }
 .oFair .modal-seminor .wrap-options-hour .wrap-options-hour-note .item-note.item-note-02 span:first-child {
   background: #FFFFFF;
@@ -14836,9 +14874,6 @@ img:not([src]) {
   .oFair .modal-seminor .modal-dialog {
     max-width: 614px;
   }
-  .oFair .modal-seminor .modal-dialog .col-form-label {
-    font-size: 16px;
-  }
   .oFair .modal-seminor .form-control {
     font-size: 15px;
   }
@@ -14847,6 +14882,14 @@ img:not([src]) {
   .oFair .modal-seminor .modal-title {
     font-size: 18px;
   }
+}
+.oFair .modal-seminor .btn {
+  min-width: 80px;
+  background: #122D98;
+  border: 0;
+  border-radius: 20px;
+  outline: none;
+  font-size: 14px;
 }
 .oFair span.help-block {
   position: relative;
@@ -15151,7 +15194,7 @@ img:not([src]) {
 /*!----------------------------------
 @Template HTML: EduFair
 @URL: https://fair.vnexpress.net/edu
-@Update time: 2021-09-15-10h00
+@Update time: 2021-09-15-16h20
 @Feedback: tuanla60@fpt.com.vn
 ----------------------------------- */
 /*# sourceMappingURL=style-pc.css.map */
