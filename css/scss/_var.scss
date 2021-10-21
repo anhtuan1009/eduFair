@@ -1,0 +1,114 @@
+.oFair-ver-20210803-02h57 {
+	visibility: visible;
+}
+/*********************
+VARIABLES
+*********************/
+
+
+$xanh: #004989;
+$xanh_1: #EAF2FF;
+$xanh_2: rgb(37, 117, 252);
+$xanh_3: #2575FC;
+$sua: #EBEBD3;
+$vang: #F5A623;
+$den: #000000;
+$xam: #333333;
+$xam_1:#666666;
+$xam_2: #EEEEEE;
+$xam_3: #C4C4C4;
+$trang: #ffffff;
+$hong: #FFD5C2;
+$hong_1: #ED1C94;
+$palefootertext: #d2d0c2;
+$modulebackground: #d0cdc4;
+
+//Alpha
+$alpha: .5;
+$alpha_1: 1;
+$alpha_2: .1;
+
+
+@mixin btn-xanh {
+    color: $trang;
+    background-color: $xanh_3;
+    border-color: $xanh_3;
+}
+@mixin btn-hong {
+    color: $trang;
+    background-color: $hong_1;
+    border-color: $hong_1;
+}
+
+// @font-face {
+// 	font-family: 'Averta';
+// 	font-style: normal;
+// 	font-weight: 400;
+// 	src: url('../fonts/Averta-Regular.otf');
+// 	font-display:swap
+// }
+// @font-face {
+// 	font-family: 'Averta-Semibold';
+// 	font-style: normal;
+// 	font-weight: 600;
+// 	src: url('../fonts/Averta-Semibold.otf');
+// 	font-display:swap
+// }
+// @font-face {
+// 	font-family: 'Averta-Bold';
+// 	font-style: normal;
+// 	font-weight: 700;
+// 	src: url('../fonts/Averta-Bold.otf');
+// 	font-display:swap
+// }
+// @font-face {
+// 	font-family: 'Averta-Black';
+// 	font-style: normal;
+// 	font-weight: 900;
+// 	src: url('../fonts/Averta-Black.otf');
+// 	font-display:swap
+// }
+
+
+
+// Start Chia cot theo flex - gutter with - space item padding
+    @mixin gap_3($column,$gap) {
+
+        $number_gap:        $column - 1;
+        $total_gap:         #{$gap * $number_gap};
+        $clear_margin:      $total_gap / $column;
+        $add_padding:       $gap / 2;
+        margin: 0 (-$add_padding);
+
+        &>* {
+            width: percentage(1/$column);
+            padding: $add_padding;
+        }
+    }
+
+    // .example {
+    //     @include gap_3(3,90px);
+    // }
+// End Chia cot theo flex - gutter
+
+
+// Start Chia cot theo flex - gutter with - space item Margin
+    @mixin gap_4($column,$gap) {
+
+        $number_gap:        $column - 1;
+        $total_gap:         #{$gap * $number_gap};
+        $clear_margin:      $total_gap / $column;
+        $add_padding:       $gap / 2;
+        $width_item:        #{percentage(1/$column)} - #{$gap};
+        margin: 0 (-$add_padding);
+
+        &>* {
+            width: calc(#{percentage(1/$column)} - #{$gap});
+            margin: $add_padding;
+        }
+    }
+
+    // .example {
+    //     @include gap_4(3,90px);
+    // }
+// End Chia cot theo flex - gutter

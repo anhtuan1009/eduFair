@@ -1,0 +1,191 @@
+
+.ps > .ps__rail-x,
+.ps > .ps__rail-y {   opacity: 0.6; }
+
+.oFair {
+    // Start custom lightgallery js
+    .lg-backdrop.in {
+        opacity: 0.93;
+    }
+    .lg-sub-html {
+        font-family: Arial;
+        .title-sub {
+            max-height: 68px;
+            margin: 5px 0 0;
+            font-size: 12px;
+            overflow-y: auto;
+        }
+    }
+
+    .lg-thumb-outer {
+        text-align: center;
+    }
+    .lg-outer .lg-thumb {
+        position: relative;
+        display: inline-block;
+        padding: 10px 10px !important;
+        margin: 0 auto -10px !important;
+    }
+    .lg-outer .lg-video-cont,
+    .lg-outer .lg-img-wrap {
+        padding: 50px 5px;
+    }
+    .lg-outer {
+        .lg-video-cont.lg-has-iframe {
+            height: 100%;
+            .lg-video {
+                height: 100%;
+                iframe.lg-object {
+                    max-height: calc(100vh - 100px);
+                    height: calc(100vh - 100px);
+                }
+            }
+        }
+    }
+}
+
+// S- Fix box dang ky acount VNE
+.oFair {
+    .mfp-bg {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1061 !important;
+        overflow: hidden;
+        position: fixed;
+        background: #0b0b0b;
+        opacity: 0.8;
+        z-index: 1060;
+    }
+    .mfp-wrap {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1062 !important;
+        position: fixed;
+        outline: none !important;
+        -webkit-backface-visibility: hidden;
+    }
+    .mfp-container {
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        padding: 0 6px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .mfp-container:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+    .mfp-content {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 auto;
+        text-align: left;
+        z-index: 1045;
+    }
+    .mfp-close {
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        text-decoration: none;
+        text-align: center;
+        opacity: 0.65;
+        color: #333;
+        font-style: normal;
+        font-size: 28px;
+        font-family: Arial, Baskerville, monospace;
+    }
+    button.mfp-close {
+        overflow: visible;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+        -webkit-appearance: none;
+        display: block;
+        outline: none;
+        z-index: 1046;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+    }
+    .message_box {
+        z-index: 1063 !important;
+    }
+}
+// E- Fix box dang ky acount VNE
+
+// Any Edge
+@supports not (-ms-ime-align:auto) {
+    .section-scholarship {
+        background-attachment: fixed;
+    }
+}
+@supports not (clip-path: inset(50%)) {
+    .triangle-up {
+        display: none !important;
+        span {
+            position: absolute;
+            display: block;
+            z-index: 1;
+            top: auto;
+            bottom: auto;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 100px;
+            height: 40px;
+            line-height: 55px;
+            font-size: 21px;
+            color: #fff;
+            text-align: center;
+            transform: none;
+        }
+    }
+}
+
+// Any Firefox
+@-moz-document url-prefix() { 
+    .triangle-up {
+        display: none !important;
+    }
+}
+
+// Chrome & Safari (any version)
+// @media screen and (-webkit-min-device-pixel-ratio:0) { }
+
+
+// IE 6, 7 and 8
+// @media \0screen\,screen\9 {
+//     .ie678 {
+//         property: value;
+//     }
+// }
+
+
+// IE 8,9 and 10
+// @media screen\0 {
+//     .ie8910 {
+//         property: value;
+//     }
+// }
+
+
+// IE 10 and above
+// @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+//     .ie10up {
+//         property:value;
+//     }
+// }
+

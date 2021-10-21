@@ -1,0 +1,138 @@
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+    overflow: hidden;
+}
+.modal-nav-side-menu {
+	padding: 0 !important;
+	.modal-dialog {
+		left: 0;
+		float: left;
+		margin: 0;
+		height: 100%;
+		width: 90%;
+		max-width: 388px;
+		.modal-content {
+			height: 100%;
+			max-height: 100%;
+			overflow: auto;
+			border: 0;
+			border-radius: 0;
+		}
+	}
+
+	.nav-side-menu {
+		position: fixed;
+		display: block;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		// background: linear-gradient(30deg, #2575FC 0%, #6A11CB 100%);
+		background: #122d98;
+		color: #fff;
+		font-size: 16px;
+		z-index: 999;
+		overflow: auto;
+		transform: translate(0,0);
+		pointer-events: auto;
+		&.show {
+			display: block;
+		}
+		a {
+			color: inherit;
+			outline: none;
+		}
+		.btn-close-nav {
+			position: fixed;
+			display: block;
+			width: 32px;
+			height: 32px;
+			padding: 3px;
+			top: 0;
+			right: 0;
+			line-height: 28px;
+			text-align: center;
+			background: rgba(255, 255, 255, 0.56);
+			color: #292929;
+			font-size: 16px;
+			z-index: 2;
+			cursor: pointer;
+			svg {
+				vertical-align: top;
+				path {
+					fill: transparent;
+					stroke: currentColor;
+					stroke-linejoin: round;
+					stroke-width: 3;
+				}
+			}
+		}
+		.menu-list {
+			position: relative;
+			display: block;
+			width: 100%;
+			overflow: hidden;
+			overflow-y: auto;
+			nav {
+				margin: 0;
+				padding: 0;
+			}
+			ul { 
+				list-style: none;
+				margin: 0;
+				padding: 35px 15px 15px;
+				display: flex;
+				flex-direction: column;
+				li { 
+					flex: auto;
+					margin-bottom: 5px;
+					a { 
+						position: relative;
+						display: block;
+						font-style: normal;
+						font-weight: normal;
+						font-size: 14px;
+						line-height: 40px;
+						padding: 0 15px;
+						text-decoration: none;
+						text-transform: uppercase;
+						&:hover {
+							background: #06afd0;
+							border-radius: 5px;
+						}
+						&.active {
+							background: #06afd0;
+							border-radius: 5px;
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+}
+
+@media all and (min-width: 400px) {
+	.modal-nav-side-menu {
+		.nav-side-menu {
+			width: 388px;
+		}
+	}
+}
+@media all and (max-width: 365px) {}
+@media all and (max-width: 355px) {
+	.modal-nav-side-menu {
+		.nav-side-menu {
+			.menu-list {
+			}
+		}
+	}
+}

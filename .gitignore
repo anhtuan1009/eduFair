@@ -31,4 +31,4 @@ yarn-error.log*
 
 #anh tuan add
 prepros.config
-/css/scss
+#/css/scss

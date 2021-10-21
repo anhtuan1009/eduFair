@@ -638,4 +638,28 @@ $(document).ready(function() {
         const boxVideoThumb_H = new PerfectScrollbar(boxVideoThumbH);
     }
     // End scroll cate
+
+
+
+    _counterUp();
 });
+
+
+/* Start counterUp Number Area js
+============================================================================================ */
+function _counterUp() {
+    var items_couter_up = $('.js_counters_up .js_item_counter');
+    if (items_couter_up[0]) {
+        items_couter_up.each(function() {
+            var e = $(this).attr('data-to');
+            $(this).delay(3e3).countTo({
+                from: 1,
+                to: e,
+                speed: 3500,
+                refreshInterval: 50
+            });
+        });
+    }
+}
+/* End counterUp Number Area js
+============================================================================================ */
